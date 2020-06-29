@@ -1,0 +1,8 @@
+/*Base Button Design*/
+
+@mixin buttons($color) {
+  color: whitesmoke;
+  background-color: $color;
+  border-radius: 5px;
+  width: 70px;
+}
