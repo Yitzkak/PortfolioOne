@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+$font-stack: "Poppins", sans-serif;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-stack;
+    text-decoration: none;
+}
+
+html, body{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    padding: 3px 40px;
+
+    .logo{
+        height: 100%;
+        flex-grow: 5;
+        padding: 5px 20px;
+        text-align: center;
+
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    .nav{
+        display:flex;
+        flex-grow: 3;
+        justify-content: center;
+        align-items: center;
+        line-height: 80px;
+        position: relative;
+        
+        li{
+            list-style: none;
+            flex: 1;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        a{
+            color: #1d1f20;
+            transition: color 0.3s ease-in-out;
+        }
+
+        
+        li:first-child a{
+            color: #333;
+        }
+
+        li:hover a{
+            color: #ff5757;
+        }
+
+
+        .underline{
+            position: absolute;
+            background-color: #ff5757;
+            height: 5px;
+            width: 33.33%;
+            top: 0;
+            left: 0;
+            transition: 0.3s all ease;
+        }   
+
+        li:nth-child(1):hover ~ .underline{
+            left:0;
+            background-color: #ff5757;
+        }  
+
+        li:nth-child(2):hover ~ .underline{
+            background-color: #ff5757;
+            left: 33.33%;
+        }
+
+        li:nth-child(3):hover ~ .underline{
+            background-color: #ff5757;
+            left: 66.66%;
+        }     
+    }  
+}
+
+
+footer{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    bottom: 0;
+    box-shadow: 0 14px 20px rgba(0, 0, 0,25);
+
+    .footer{
+        display: flex;
+        font-size: 14px;
+        background-color: #fff;
+        height: 100%;
+        align-items: center;
+       
+
+
+        &__copyright{
+            flex: 5; 
+            text-align: center;
+        }
+    
+        &__social{
+            flex: 5;
+            display: flex;
+            justify-content: center;
+
+            li{
+                list-style: none;
+                margin-left: 20px;
+                line-height: 48px;
+                padding: 0px 5px;
+                cursor: pointer;
+
+                a{
+                    font-size: 18px;
+                    color: #333;
+                    transition: color 0.5s ease;
+                }
+            }
+
+            li:hover a{
+                color: #ff5757;
+            }
+        }
+    }
+}

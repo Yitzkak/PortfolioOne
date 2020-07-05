@@ -6085,19 +6085,81 @@ footer {
 
 /***  Header Style  ***/
 header {
-  color: white;
+  color: black;
   padding: 5px;
-  text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 header .logo {
-  font-size: 35px;
-  font-weight: 600;
-  padding: 5px 0px 0.3%;
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+  height: 60px;
+  padding: 0px 10%;
+}
+
+header .logo img {
+  max-width: 100%;
+  height: inherit;
+}
+
+header .top-nav {
+  /* background-color: cornflowerblue; */
+  -webkit-box-flex: 7;
+      -ms-flex-positive: 7;
+          flex-grow: 7;
+}
+
+header .top-nav ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style: none;
+  justify-items: j;
+}
+
+header .top-nav ul li {
+  margin: 0px 8px;
+  padding: 4px 0px;
+  cursor: pointer;
+  /*  transition: border-bottom 1s; */
+}
+
+header .top-nav ul li::after {
+  content: "";
+  display: block;
+  width: 20px;
+}
+
+@-webkit-keyframes changeBorderBottom {
+  from {
+    border-bottom: 0px solid transparent;
+  }
+  to {
+    border-bottom: 2px solid black;
+  }
+}
+
+@keyframes changeBorderBottom {
+  from {
+    border-bottom: 0px solid transparent;
+  }
+  to {
+    border-bottom: 2px solid black;
+  }
+}
+
+header .top-nav ul li:hover {
+  -webkit-animation-name: changeBorderBottom;
+          animation-name: changeBorderBottom;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
 
 header .border-bottom {
@@ -6159,7 +6221,7 @@ section .nav-wrapper {
 
 section .nav-wrapper__text {
   text-align: center;
-  font-size: 35px;
+  font-size: 1vh;
 }
 
 section .nav-wrapper__title {
@@ -6214,7 +6276,7 @@ section .nav-wrapper__box {
 .footer {
   margin-top: 53px;
   color: #fff;
-  padding: 8px;
+  padding: 0.1% 8px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;

@@ -38,16 +38,70 @@ footer {
 
 /***  Header Style  ***/
 header {
-  color: white;
+  color: black;
   padding: 5px;
-  text-align: center;
-  flex-direction: column;
+  display: flex;
+  height: 70px;
+  background-color: white;
+  box-sizing: border-box;
+
 
   .logo {
-    font-size: 35px;
-    font-weight: 600;
-    padding: 5px 0px 0.3%;
+    flex-grow: 4;
+    height: 60px;
+    padding: 0px 10%;
+
+    img{
+      max-width: 100%;
+      height: inherit;
+    }
   }
+
+  .top-nav{
+    /* background-color: cornflowerblue; */
+    flex-grow: 7;
+    
+
+    ul{
+      display: inline-flex;
+      list-style: none;
+      justify-items: j;
+
+      li{
+        margin: 0px 8px;
+        padding: 4px 0px;
+        cursor: pointer;
+        
+       /*  transition: border-bottom 1s; */
+      }
+
+      li::after{
+        content: "";
+        display: block;
+        width: 20px; 
+        
+      }
+
+      @keyframes changeBorderBottom{
+        from{
+          border-bottom: 0px solid transparent;
+        }
+
+        to{
+          border-bottom: 2px solid black;
+        }
+      }
+
+      li:hover{
+        animation-name: changeBorderBottom;
+        animation-duration: 4s;
+      }
+    }
+
+
+  }
+
+
 
   .border-bottom {
     width: 100%;
@@ -93,7 +147,7 @@ section {
 
     &__text {
       text-align: center;
-      font-size: 35px;
+      font-size: 1vh;
     }
 
     &__title {
@@ -143,7 +197,7 @@ section {
 .footer {
   margin-top: 53px;
   color:#fff;
-  padding: 8px;
+  padding: 0.1% 8px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
